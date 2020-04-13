@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-const Condition = (props) => {
+const Condition = ({temp, condition}) => { // this component only receives parameters that are passed from WeatherCard component
 
     const Temperature = styled.h1`
         font-family: 'Fira Sans', sans-serif;
@@ -15,8 +15,8 @@ const Condition = (props) => {
     `
     return (
         <>
-            <Temperature>20 C</Temperature>
-            <State>Cloudy</State>
+            <Temperature>{temp}°C</Temperature>
+            <State>{condition}</State>
         </>
      );
 }
